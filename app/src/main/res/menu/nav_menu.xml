@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="用户">
+        <menu>
+            <item android:title="登录/注册" android:icon="@mipmap/iconmonstr_user_6_24" />
+        </menu>
+          </item>
+    <item android:title="我" >
+        <menu>
+            <item android:title="浏览历史" android:icon="@mipmap/iconmonstr_clock_thin_24"/>
+            <item android:title="我的贴子" android:icon="@mipmap/iconmonstr_document_thin_24"/>
+            <item android:title="我的消息" android:icon="@mipmap/iconmonstr_mail_thin_24"/>
+            <item android:title="交流圈" android:icon="@mipmap/iconmonstr_speech_bubble_comments_thin_24"/>
+        </menu>
+          </item>
+    <group >
+        <item
+            android:id="@+id/app_bar_switch"
+            android:title="检测更新"
+            app:actionLayout="@layout/switch_item"
+            app:showAsAction="always" />
+    </group>
+</menu>

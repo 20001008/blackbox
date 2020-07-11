@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="20dp">
+
+            <ImageView
+                android:id="@+id/home_head"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/draw_editor"
+            android:drawableLeft="@mipmap/iconmonstr_magnifier_2_24"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="这里填写搜索内容"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:textSize="14sp" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="15dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/home_smart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
+                android:id="@+id/home_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
